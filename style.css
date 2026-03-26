@@ -49,7 +49,7 @@ body {
 }
 #tb2 #hours {
     color: rgb(179, 107, 13);
-    background-color: rgba(12, 12, 12, 0.871);
+    /* background-color: rgba(12, 12, 12, 0.871); */
 }
 #tb3 #minutes {
     color: rgba(206, 190, 16, 0.982);
