@@ -45,7 +45,7 @@ body {
 
 #tb1 #days {
     color: rgb(10, 142, 225);
-    background-color: rgba(12, 12, 12, 0.871);
+    /* background-color: rgba(12, 12, 12, 0.871); */
 }
 #tb2 #hours {
     color: rgb(179, 107, 13);
@@ -53,11 +53,11 @@ body {
 }
 #tb3 #minutes {
     color: rgba(206, 190, 16, 0.982);
-    background-color: rgba(12, 12, 12, 0.871);
+    /* background-color: rgba(12, 12, 12, 0.871); */
 }
 #tb4 #seconds {
     color: rgb(60, 207, 109);
-    background-color: rgba(12, 12, 12, 0.871);
+    /* background-color: rgba(12, 12, 12, 0.871); */
 }
 
 .time-box span {
