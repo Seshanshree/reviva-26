@@ -26,7 +26,9 @@ body {
     overflow-x: hidden;
     cursor: none;
 }
-
+a{
+    text-decoration: none;
+}
 .countdown {
   display: flex;
   justify-content: center;
