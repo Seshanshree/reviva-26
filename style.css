@@ -27,7 +27,9 @@ body {
     cursor: none;
 }
 .a1{
+    margin-top: 10px;
     text-decoration: none;
+    color: var(--neon);
     font-weight: 900;
     font-size: 18px;
     border: 1px solid var(--neon);
