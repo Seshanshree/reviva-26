@@ -14,6 +14,109 @@
     --white: #e8f4ff;
     --storm: #1a2744;
 }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Rajdhani:wght@400;500;600&display=swap');
+ 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.2; }
+  }
+ 
+  .announce-card-1 { animation: fadeUp 0.55s ease 0.1s forwards; }
+  .announce-card-2 { animation: fadeUp 0.55s ease 0.22s forwards; }
+ 
+  .announce-card-hover:hover {
+    transform: translateY(-5px);
+    border-color: rgba(168,85,247,0.6) !important;
+    box-shadow: 0 8px 32px rgba(168,85,247,0.18);
+  }
+ 
+  .live-dot-anim { animation: blink 1.4s ease-in-out infinite; }
+ 
+  /* ── Responsive: Tablet (max 768px) ── */
+  @media (max-width: 768px) {
+    .announce-wrapper {
+      padding: 40px 16px !important;
+    }
+    .announce-title {
+      font-size: 1.8rem !important;
+      letter-spacing: 0.07em !important;
+    }
+    .announce-subtitle {
+      font-size: 0.75rem !important;
+      letter-spacing: 0.18em !important;
+      margin-bottom: 32px !important;
+    }
+    .announce-grid {
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+    .card-top-inner {
+      padding: 18px 18px !important;
+    }
+    .card-body-inner {
+      padding: 16px 18px !important;
+    }
+    .card-footer-inner {
+      padding: 12px 18px !important;
+    }
+    .card-body-text {
+      font-size: 0.98rem !important;
+    }
+  }
+ 
+  /* ── Responsive: Mobile (max 480px) ── */
+  @media (max-width: 480px) {
+    .announce-wrapper {
+      padding: 30px 12px !important;
+    }
+    .announce-title {
+      font-size: 1.4rem !important;
+      letter-spacing: 0.05em !important;
+      margin-bottom: 10px !important;
+    }
+    .announce-subtitle {
+      font-size: 0.68rem !important;
+      letter-spacing: 0.12em !important;
+      margin-bottom: 24px !important;
+    }
+    .announce-grid {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+    .card-icon-el {
+      font-size: 1.6rem !important;
+    }
+    .card-title-el {
+      font-size: 0.88rem !important;
+    }
+    .card-tag-el {
+      font-size: 0.62rem !important;
+    }
+    .card-top-inner {
+      padding: 14px 14px !important;
+      gap: 12px !important;
+    }
+    .card-body-inner {
+      padding: 14px 14px !important;
+    }
+    .card-footer-inner {
+      padding: 10px 14px !important;
+    }
+    .card-body-text {
+      font-size: 0.93rem !important;
+      line-height: 1.6 !important;
+    }
+    .card-footer-label {
+      font-size: 0.7rem !important;
+    }
+  }
+
+
+
 
 html {
     scroll-behavior: smooth;
