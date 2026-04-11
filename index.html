@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviva'26</title>
+    <style>
+        /* Card container */
+.sky-door-card {
+  width: 360px;
+  text-align: center;
+  perspective: 1400px;
+  padding: 20px;
+}
+
+/* Title and description */
+.door-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.door-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Double door container */
+.sky-door {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin-bottom: 25px;
+  perspective: 1200px;
+}
+
+/* Door panels */
+.door-left,
+.door-right {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(145deg, #8b5e3c, #654321);
+  border: 3px solid #432100;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  transition:
+    transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    box-shadow 0.5s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* Left door opens to the left */
+.door-left {
+  left: 0;
+  transform-origin: left center;
+}
+
+/* Right door opens to the right */
+.door-right {
+  right: 0;
+  transform-origin: right center;
+}
+
+/* Hover: swing doors open */
+.sky-door:hover .door-left {
+  transform: rotateY(-120deg);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.sky-door:hover .door-right {
+  transform: rotateY(120deg);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Door handles */
+.door-handle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle at 30% 30%, #ffd700, #b8860b);
+  border: 1px solid #8b6914;
+  box-shadow:
+    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+    2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: handle-shine 3s infinite alternate;
+}
+
+/* Handle positions */
+.door-left .door-handle {
+  right: 15px;
+}
+.door-right .door-handle {
+  left: 15px;
+}
+
+/* Handle shine animation */
+@keyframes handle-shine {
+  0% {
+    box-shadow:
+      inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+      2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow:
+      inset -1px -1px 6px rgba(255, 255, 200, 0.5),
+      2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow:
+      inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+      2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Door content: message + buttons */
+.door-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition:
+    opacity 0.6s ease 0.6s,
+    transform 0.6s ease 0.6s;
+}
+
+/* Door message */
+.door-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Show content when hovering doors */
+.sky-door:hover .door-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #654321;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #876543;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="sky-door-card">
+  <div class="door-title">Oops! You’re a bit lost…</div>
+  <div class="door-description">Home is just beyond these doors</div>
+
+  <div class="sky-door">
+    <div class="door-left">
+      <div class="door-handle"></div>
+    </div>
+    <div class="door-right">
+      <div class="door-handle"></div>
+    </div>
+
+    <div class="door-content">
+      <div class="door-message">Take the safe path forward</div>
+      <div class="action-buttons">
+        <a href="/" class="btn">Go Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
