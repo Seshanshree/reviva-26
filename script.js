@@ -20,7 +20,7 @@ const countdown = setInterval(function () {
   if (distance < 0) {
     clearInterval(countdown);
     document.querySelector(".countdown").innerHTML = 
-      "<h2>Workshop Started!</h2>";
+      "<h2>Fest started !</h2>";
   }
 
 }, 1000);
